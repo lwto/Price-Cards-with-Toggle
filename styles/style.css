@@ -2,6 +2,7 @@
 * {
   box-sizing: border-box;
   padding: 0;
+  margin: 0;
 }
 
 body {
@@ -26,12 +27,11 @@ a {
 }
 
 .pricing-component {
-  margin-top: 30px;
+  margin-top: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 3rem;
 }
 
 .pricing-component h1 {
@@ -39,6 +39,7 @@ a {
 }
 
 .pricing-component .switch {
+  margin: 2rem;
   display: flex;
   align-items: center;
   font-size: 1rem;
@@ -46,8 +47,7 @@ a {
 }
 
 .pricing-component .switch .toggle {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0 2rem;
 }
 
 .pricing-component .switch .toggle .checkbox {
@@ -81,16 +81,20 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 4rem;
+  margin: 3rem 0;
 }
 
 .card-container .card {
+  margin-bottom: 2rem;
   text-align: center;
   border-radius: 10px;
   padding: 30px;
-  margin-top: 20px;
   background-color: white;
   box-shadow: -5px 5px 15px 1px rgba(0, 0, 0, 0.1);
+}
+
+.card-container .card h1, .card-container .card h2, .card-container .card h3 {
+  margin: .875rem 0;
 }
 
 .card-container .card h1 {
@@ -146,7 +150,7 @@ a {
     flex-direction: row;
   }
   .card-container .card.active {
-    transform: scale(1.05);
+    transform: scale(1.08);
     z-index: 1;
   }
 }
