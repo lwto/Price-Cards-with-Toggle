@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import "colors";
+
+*{
+    box-sizing: border-box;
+    padding:0;
+}
+
+body{
+    font-family:'Montserrat', sans-serif;
+    color:$purple-gray;
+    background-color: $soft-purple;
+}
+
+a{
+    text-decoration: none;
+    color:$dark-gray;
+}
+
+.wrapper{
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing-component{
+    margin-top:30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    h1{
+        font-size: 2.2rem;
+    }
+    .switch{
+        display:flex;
+        align-items: center;
+        font-size: 1rem;
+        color:$gray;
+        .toggle{
+            margin-left: 10px;
+            margin-right: 10px;
+            .checkbox{
+                display:none;
+                
+            }
+            .sub{
+                background: $gradient;
+                display:flex;
+                justify-content: flex-start;
+                align-items: center;
+                height:1.6rem;
+                width:3rem;
+                border-radius: 1.8rem;
+                padding:0.3rem;
+                .circle{
+                    background-color: white;
+                    height:1.2rem;
+                    width:1.2rem;
+                    border-radius: 50%;
+                }
+            }
+            .checkbox:checked + .sub{
+                justify-content: flex-end;
+            }
+        }
+    }
+}
+
+.card-container{
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+    .card{
+        
+        text-align: center;
+        border-radius: 10px;;
+        padding:30px;
+        margin-top: 20px;
+        background-color: white;
+        box-shadow: -5px 5px 15px 1px rgba(0,0,0,0.1);
+        h1{
+            font-size: 3rem;
+            color:$dark-gray;
+        }
+        .btn{
+            cursor: pointer;
+            border-radius: 10px;
+            padding:15px;
+            margin-top: 20px;
+            font-weight: 500;
+            color:white;
+            background:$gradient;
+        }
+        
+    }  
+}
+
+.card-container .card.active{
+    background: $gradient;
+    color:white;
+
+
+    h1{
+        color:white;
+    }
+    .btn{
+        color:$purple;
+        background: white;
+    }
+}
+
+
+@media (min-width:768px){
+    .wrapper{
+        height: 100vh;
+        overflow: hidden;
+    }
+    .pricing-component{
+        h1{
+            font-size:2.75rem ;
+        }
+    }
+    .card-container{
+        flex-direction: row;
+        .card.active{
+            
+            transform:scale(1.1);
+            z-index: 1;
+        }
+    }
+}
