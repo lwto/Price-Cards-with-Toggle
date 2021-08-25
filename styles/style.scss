@@ -23,6 +23,9 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url(../images/bg-top.svg),url(../images/bg-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: top right, bottom left;
 }
 
 .pricing-component{
@@ -130,7 +133,7 @@ a{
 
 @media (min-width:768px){
     .wrapper{
-        height: 100vh;
+        
         overflow: hidden;
     }
     .pricing-component{
